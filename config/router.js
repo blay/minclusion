@@ -23,10 +23,17 @@ export const FeedStack = StackNavigator({
 });
 
 export const Tabs = TabNavigator({
+  Roadmap: {
+    screen: Settings,
+    navigationOptions: {
+      tabBarLabel: 'Roadmap',
+      tabBarIcon: ({ tintColor }) => <Icon name="account-circle" size={35} color={tintColor} />
+    },
+  },
   Feed: {
     screen: FeedStack,
     navigationOptions: {
-      tabBarLabel: 'Roadmap',
+      tabBarLabel: 'Steps',
       tabBarIcon: ({ tintColor }) => <Icon name="list" size={35} color={tintColor} />,
     },
   },
@@ -37,6 +44,7 @@ export const Tabs = TabNavigator({
       tabBarIcon: ({ tintColor }) => <Icon name="account-circle" size={35} color={tintColor} />
     },
   },
+
 });
 
 export const SettingsStack = StackNavigator({
