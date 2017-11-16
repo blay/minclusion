@@ -1,20 +1,23 @@
 import React, { Component } from 'react';
 import {
+  StyleSheet,
   Text,
   View,
-  ScrollView
+  ScrollView,
 } from 'react-native';
 import { List, ListItem } from 'react-native-elements';
 import { users } from '../config/data';
 
 class Feed extends Component {
+  
   onLearnMore = (user) => {
     this.props.navigation.navigate('Details', { ...user });
   };
 
   render() {
-    return (
+    return(       
       <ScrollView>
+     
         <List>
           {users.map((user) => (
             <ListItem
@@ -27,10 +30,11 @@ class Feed extends Component {
             />
           ))}
         </List>
-
+             
       </ScrollView>
     );
   }
 }
+
 
 export default Feed;
